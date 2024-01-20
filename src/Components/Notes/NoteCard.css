@@ -1,0 +1,43 @@
+.NoteCardName{
+    margin-bottom: 20px;
+}
+
+.fontWeight{
+    font-weight: 500;
+}
+
+.myNotesContainer{
+    border: 1px solid grey;
+    padding: 1rem;
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.myNotesContainer p{
+    margin: 10px 0;
+}
+
+.myNotesContainer button{
+    margin: 0 10px 0 0;
+}
+
+.lowerContainer{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+
+.dateContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.dateContainer p{
+    margin: 0;
+    padding: 0;
+    color: rgba(128, 128, 128, 0.9);
+}
+
+.upperContainer{
+    display: flex;
+    justify-content: space-between;
+}

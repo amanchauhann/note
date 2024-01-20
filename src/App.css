@@ -1,5 +1,13 @@
+:root{
+  --primary-color: rgb(53, 53, 53);
+}
+
+*{
+  margin: 0;
+}
+
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {

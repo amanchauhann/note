@@ -1,0 +1,55 @@
+.homeContainer{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 58px);
+}
+
+.addNoteContainer{
+    margin: 2rem;
+    background: rgb(247, 245, 245);
+    border-radius: 15px;
+    width: 500px;
+}
+
+.noteNav{
+    padding: 1rem;
+    color: rgb(210, 210, 210);
+    font-weight: 500;
+    font-size: 20px;
+    background: #272727;
+    
+}
+
+
+.Notesmain {
+    padding: 1rem;
+    padding-top: 2rem;;
+    max-width: 500px;
+}
+.addNote {
+    border: 3px dashed black;
+    padding: 2.5rem;
+    text-align: center;
+    background: transparent;
+    transition: 1s;
+}
+
+.addNote:hover {
+    background: rgb(218, 215, 215);
+    cursor: pointer;
+}
+
+.myNotesTitle{
+    margin: 2rem 0 2rem 0;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+    max-width: max-content;
+}
+
+.notesContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
