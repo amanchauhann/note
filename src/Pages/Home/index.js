@@ -63,7 +63,7 @@ const Home = () => {
                     <div className="notesLowerContainer">
                         <h3 className="myNotesTitle">My notes</h3>
                         {notesToShow.length > 0 ? <div className="filterContainer">
-                            <input className="searchBar" onChange={searchHandler} />
+                            <input className="searchBar" onChange={searchHandler} placeholder="Search with title/description" />
 
                             <select id="cars" onChange={sortHandler}>
                                 <option selected disabled>Sort by Update or create</option>
