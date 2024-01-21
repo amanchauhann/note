@@ -73,7 +73,7 @@ const Home = () => {
                     }}>Add new Note</div>}
                     <div className="notesLowerContainer">
                         <h3 className="myNotesTitle">My notes</h3>
-                        <div className="filterContainer">
+                        {notesToShow.length > 0 ? <div className="filterContainer">
                             <input className="searchBar" onChange={searchHandler} />
 
                             {/* <label for="cars">Choose a car:</label> */}
@@ -83,7 +83,8 @@ const Home = () => {
                                 <option value="updatedAt">Updated</option>
                                 {/* <option value="audi">Audi</option> */}
                             </select>
-                        </div>
+                        </div> :
+                            <h2>NO Notes to show</h2>}
 
                         <div className="notesContainer">
                             {notesToShow.slice(page * notePerPage - notePerPage, page * notePerPage).map((eachNote) => <NotesCard {...eachNote} setNewNoteForm={setNewNoteForm} setShowForm={setShowForm} setFromUpdate={setFromUpdate} setExistingNotes={setExistingNotes} />)}

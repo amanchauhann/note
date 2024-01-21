@@ -11,7 +11,7 @@ const Form = ({ setShowForm, setNewNoteForm, newNoteForm, toUpdate }) => {
 
     const submitHandler = (e) => {
         e.preventDefault()
-        localStorage.setItem("newNoteForm", JSON.stringify([{ ...newNoteForm }, ...existingNotes]));
+        localStorage.setItem("newNoteForm", JSON.stringify([{ ...newNoteForm, createdAt: new Date(), updatedAt: new Date(), }, ...existingNotes]));
         resetHandler()
         setShowForm(false)
     }

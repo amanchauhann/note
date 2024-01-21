@@ -4,9 +4,7 @@ import "./Nav.css"
 const Nav = () => {
     return (
         <nav className="navigation">
-            {/* <Link to="/login"> */}
             NOTE
-            {/* </Link> */}
         </nav>
     )
 }
