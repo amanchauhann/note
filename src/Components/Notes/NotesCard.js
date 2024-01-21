@@ -1,14 +1,15 @@
 import "./NoteCard.css"
+import HTMLReactParser from 'html-react-parser'
 
 const NotesCard = ({ setNewNoteForm, setShowForm, setFromUpdate, setExistingNotes, ...eachNote }) => {
-    const { title, description, author, published_date, id, createdAt, updatedtAt } = eachNote
+    const { title, description, author, published_date, id, createdAt, updatedAt } = eachNote
     const updateHandler = () => {
         setNewNoteForm({
             id,
             title,
             description,
             createdAt,
-            updatedtAt
+            updatedAt
             // author,
             // published_date,
         })
@@ -29,11 +30,11 @@ const NotesCard = ({ setNewNoteForm, setShowForm, setFromUpdate, setExistingNote
                 <div>
                     <h2 className="NoteCardName">{title}</h2>
                     {/* <p >URL: <span className="fontWeight">{url}</span></p> */}
-                    <p>Description: <div className="fontWeight">{description}</div></p>
+                    <p>Description: <div className="fontWeight">{HTMLReactParser(description)}</div></p>
                 </div>
-                {updatedtAt && <div className="dateContainer">
+                {updatedAt && <div className="dateContainer">
                     <p>Updated At:</p>
-                    <p>{updatedtAt.slice(11, 19)}</p>
+                    <p>{new Date(updatedAt).toLocaleTimeString()}</p>
                 </div>}
             </div>
 
@@ -45,7 +46,7 @@ const NotesCard = ({ setNewNoteForm, setShowForm, setFromUpdate, setExistingNote
                 </div>
                 <div className="dateContainer">
                     <p>Created At:</p>
-                    <p>{createdAt.slice(11, 19)}</p>
+                    <p>{new Date(createdAt).toLocaleTimeString()}</p>
                 </div>
             </div>
 

@@ -22,8 +22,7 @@
     
 }
 
-
-.Notesmain {
+.notesMain {
     padding: 1rem;
     padding-top: 2rem;;
     max-width: 500px;
@@ -42,7 +41,7 @@
 }
 
 .myNotesTitle{
-    margin: 2rem 0 2rem 0;
+    margin: 2rem 0 0 0;
     border-bottom: 2px solid black;
     padding-bottom: 5px;
     max-width: max-content;
@@ -52,4 +51,48 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+.notesLowerContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.filterContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchBar{
+    height: 28px;
+    border-radius: 5px;
+}
+
+.pagesContainer {
+    padding: 1rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.pages {
+    padding: 0.5rem 0.8rem;
+    background: var(--primary-color);
+    color: white;
+    border: 1px solid white;
+    transition: 0.4s;
+}
+
+.pages:hover {
+    cursor: pointer;
+    background: none;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color)
+}
+
+.pageSelected {
+    background: none;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color)
 }
